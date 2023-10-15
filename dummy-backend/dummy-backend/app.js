@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.get("/posts", async (req, res) => {
   const storedPosts = await getStoredPosts();
-  await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500)); // set delay
+  // await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500)); // set delay
   res.json({ posts: storedPosts });
 });
 
